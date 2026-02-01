@@ -46,12 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 if (!newCity.isEmpty()) {
                     dataList.add(newCity);
                     cityAdapter.notifyDataSetChanged();
-                    addCityEditText.setText(""); // Clear the input field
+                    addCityEditText.setText("");
                 }
             }
         });
 
-        // Select City Logic
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -59,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Delete City Button Logic
         deleteCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
