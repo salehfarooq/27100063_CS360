@@ -1,3 +1,5 @@
+// Class: HistoryActivity
+// Purpose: Displays a raw list of all emotion logs.
 package com.example.a27100063_emotilog;
 
 import android.os.Bundle;
@@ -14,7 +16,7 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
 
         final ListView listView = findViewById(R.id.history_list_view);
-        final ArrayList<EmotionEntry> logs = DataManager.getInstance().getLogs();
+        final ArrayList<EmotionEntry> logs = DataManager.getInstance(this).getLogs();
 
         final ArrayAdapter<EmotionEntry> adapter = new ArrayAdapter<>(
                 this,

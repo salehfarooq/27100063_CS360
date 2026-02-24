@@ -1,3 +1,5 @@
+// Class: MainActivity
+// Purpose: Main user interface for logging emotions.
 package com.example.a27100063_emotilog;
 
 import android.content.Intent;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupEmotionButton(int viewId, final String emotionName) {
         final View button = findViewById(viewId);
         button.setOnClickListener(v -> {
-            DataManager.getInstance().addEntry(emotionName);
+            DataManager.getInstance(this).addEntry(emotionName, this);
             Toast.makeText(this, "Logged " + emotionName, Toast.LENGTH_SHORT).show();
         });
     }

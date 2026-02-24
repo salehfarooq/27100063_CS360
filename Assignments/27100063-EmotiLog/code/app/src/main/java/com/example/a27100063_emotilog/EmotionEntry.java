@@ -1,3 +1,5 @@
+// Class: EmotionEntry
+// Purpose: Model class representing a single emotion log entry.
 package com.example.a27100063_emotilog;
 import androidx.annotation.NonNull;
 
@@ -21,8 +23,10 @@ public class EmotionEntry {
         return timestamp;
     }
 
+    @NonNull
     @Override
     public String toString() {
-        return emotion + "-" + timestamp;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss");
+        return emotion + " at " + dateFormat.format(timestamp);
     }
 }
